@@ -33,28 +33,20 @@
   ansible.builtin.set_fact:
     lighthouse_home: "{{ default_web_root }}/{{ virtual_domain }}"
   tags: lighthouse
-# - name: Upload .tar.gz file containing binaries from local storage
-#   become: true
-#   ansible.builtin.copy:
-#     src: "./files/lighthouse-master.tar.gz"
-#     dest: "/tmp/lighthouse-master.tar.gz"
-#     mode: 0644
-#   register: download_lighthouse_binaries
-#   until: download_lighthouse_binaries is succeeded
-#   tags: lighthouse
-# - name: Extract lighthouse in the installation directory
-#   become: true
-#   ansible.builtin.unarchive:
-#     remote_src: true
-#     src: "/tmp/lighthouse-master.tar.gz"
-#     dest: "{{ default_web_root }}"
-#     mode: 0644
-#   tags: lighthouse
+- name: Upload .tar.gz file containing binaries from local storage
+  become: true
+  ansible.builtin.copy:
+    src: "./files/lighthouse-master.tar.gz"
+    dest: "/tmp/lighthouse-master.tar.gz"
+    mode: 0644
+  register: download_lighthouse_binaries
+  until: download_lighthouse_binaries is succeeded
+  tags: lighthouse
 - name: Extract lighthouse in the installation directory
   become: true
   ansible.builtin.unarchive:
     remote_src: true
-    src: https://github.com/VKCOM/lighthouse/archive/refs/heads/master.zip
+    src: "/tmp/lighthouse-master.tar.gz"
     dest: "{{ default_web_root }}"
     mode: 0644
   tags: lighthouse
