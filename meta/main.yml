@@ -31,17 +31,16 @@ galaxy_info:
 
   platforms:
   # Fedora versions
-   - name: Fedora
-     versions:
+  # - name: Fedora
+  #   versions:
   #   - all
-      - 25
+  #    - 25
+
   # Centos version
-  - name: EL
+  - name: Centos
     versions:
-  #   - all
-  #   - 1.0
       - 7
-  #   - 99.99
+      - 8
 
   galaxy_tags:
     - lighthouse
