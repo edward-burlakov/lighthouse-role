@@ -1,3 +1,4 @@
+---
 # Prerequestise  - NGINX server
 - name: NGINX /     Export environment variables for NGINX
   become: true
