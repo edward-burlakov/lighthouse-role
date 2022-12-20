@@ -15,7 +15,7 @@ A description of the settable variables for this role should go here, including 
 vars/main.yml, and any variables that can/should be set via parameters to the role. 
 Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
-    lighthouse_version: "7.10.1" # Lighthouse version
+    lighthouse_version: "7.10.1"                 # Lighthouse version
     nginx_home: "/etc/nginx"                     # Path to configuration files of NGINX
     default_web_root: "/usr/share/nginx/html"    # Path to default webpage of NGINX
     virtual_domain: "lighthouse-master"          # Path to virtual domain of light
