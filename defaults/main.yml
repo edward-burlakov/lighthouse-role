@@ -1,4 +1,6 @@
 ---
+# nginx user,running NGINX
+nginx_user: "nginx"
 # Path to configuration files of NGINX
 nginx_home: "/etc/nginx"
 # Path to default webpage of NGINX
